@@ -1,0 +1,41 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTP Verification</title>
+    <style>
+      body { font-family: Arial, sans-serif; background-color: #f0f8ff; display:
+      flex; justify-content: center; align-items: center; height: 100vh; margin:
+      0; } 
+      .container { text-align: center; background-color: #ffffff; padding:
+      30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%; max-width: 400px; } h1 { color: #4CAF50; margin-bottom: 20px;
+      } 
+      p { color: #555; font-size: 16px; margin-bottom: 20px; } .otp-code {
+      font-size: 24px; font-weight: bold; color: #333; margin-bottom: 20px; }
+      .btn { background-color: #4CAF50; color: #fff; padding: 10px 20px; border:
+      none; border-radius: 5px; font-size: 16px; cursor: pointer; transition:
+      background-color 0.3s ease; } 
+      .btn:hover { background-color: #45a049; }
+      .image { width: 100%; margin-top: 20px; max-width: 200px; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>OTP Verification</h1>
+      <p>Your OTP code is:</p>
+
+      <div class="otp-code">
+        {{otp}}
+        <p>expires in 10 minutes</p>
+      </div>
+
+      <button class="btn" onclick="verifyOTP()">Verify OTP</button>
+
+      <div class="image">
+        <img src="https://via.placeholder.com/150" alt="OTP Image" />
+      </div>
+    </div>
+
+  </body>
+</html>
