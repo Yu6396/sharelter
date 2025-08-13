@@ -150,6 +150,7 @@
  *             type: object
  *             required:
  *               - password
+ *               - confirmPassword
  *             properties:
  *               password:
  *                 type: string

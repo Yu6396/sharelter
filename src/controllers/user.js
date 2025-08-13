@@ -249,7 +249,7 @@ const startForgetPassword = async (req, res) => {
 };
 const completeForgetPassword = async (req, res) => {
   const { email, otp } = req.params;
-  const { password } = req.body;
+  const { password,confirmPassword } = req.body;
   try {
     const isEmailAvailable = await Otp.findOne({ email, otp });
 
@@ -259,6 +259,10 @@ const completeForgetPassword = async (req, res) => {
 
     if (isEmailAvailable.otp_expires <= new Date()) {
       throw new Error(messages.otpExpired);
+    }
+
+    if(password !== confirmPassword){
+      throw new Error(messages.passwordMismatch);
     }
     const { salt, hashedPassword } = await saltAndHashPassword(password);
     await User.updateOne(

@@ -37,4 +37,5 @@ module.exports = {
   ADMIN_UPDATED: "Admin updated successfully",
   ADMIN_IMAGE_UPDATED: "Admin image updated successfully",
   USER_IMAGE_UPDATED: "User image updated successfully",
+  passwordMismatch: "Password mismatch",
 }
