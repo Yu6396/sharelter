@@ -154,6 +154,8 @@
  *             properties:
  *               password:
  *                 type: string
+ *                confirmPassword:
+ *                 type: string
  *     responses:
  *       200:
  *         description: Password changed successfully
