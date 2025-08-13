@@ -12,7 +12,7 @@ router.post("/create",validationmiddleware(createUserSchema), createUser)
 
 router.post("/login",blockSuspendedUsers, loginUser),
 router.patch("/change/password/:user_id",UserAuthorization,validationmiddleware(changePasswordSchema),changePassword)
-router.get("/start/forget/password", startForgetPassword)
+router.post("/start/forget/password", startForgetPassword)
 router.patch("/complete/forget/password/:email/:otp", completeForgetPassword)
 router.get("/verify/:email/:otp", verifyUser)
 router.get("/resend/otp/:email", resendOtp)

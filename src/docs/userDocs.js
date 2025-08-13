@@ -104,7 +104,7 @@
 /**
  * @swagger
  * /api/user/start/forget/password:
- *   get:
+ *   post:
  *     summary: Start forget password process
  *     tags: [Users]
  *     requestBody:
