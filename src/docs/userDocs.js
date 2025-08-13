@@ -154,7 +154,7 @@
  *             properties:
  *               password:
  *                 type: string
- *                confirmPassword:
+ *               confirmPassword:
  *                 type: string
  *     responses:
  *       200:
